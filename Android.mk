@@ -47,7 +47,7 @@ include $(CLEAR_VARS)
 LOCAL_SRC_FILES := $(common_SRC_FILES) $(common_HOST_FILES) src/android.c
 LOCAL_MODULE:= libselinux
 LOCAL_MODULE_TAGS := eng
-LOCAL_STATIC_LIBRARIES := libmincrypt
+LOCAL_STATIC_LIBRARIES := libmincrypt libcutils
 LOCAL_C_INCLUDES := external/pcre
 LOCAL_WHOLE_STATIC_LIBRARIES := libpcre
 # 1003 corresponds to auditd, from system/core/logd/event.logtags
@@ -77,7 +77,7 @@ LOCAL_MODULE:= libselinux
 LOCAL_MODULE_TAGS := eng
 LOCAL_COPY_HEADERS_TO := $(common_COPY_HEADERS_TO)
 LOCAL_COPY_HEADERS := $(common_COPY_HEADERS)
-LOCAL_STATIC_LIBRARIES := libmincrypt
+LOCAL_STATIC_LIBRARIES := libmincrypt libcutils
 LOCAL_C_INCLUDES := external/pcre
 LOCAL_SHARED_LIBRARIES := liblog libpcre
 # 1003 corresponds to auditd, from system/core/logd/event.logtags
